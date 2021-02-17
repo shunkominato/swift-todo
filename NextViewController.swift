@@ -9,10 +9,18 @@ import UIKit
 
 class NextViewController: UIViewController {
 
+    var todoString = String()
+    @IBOutlet weak var todoLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        todoLabel.text = todoString
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = false
+        print("will")
     }
     
 
